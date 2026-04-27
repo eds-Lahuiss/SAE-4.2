@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnaliser votre veste - Jiyou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/edit.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">← Retour</a>
+
+    <main class="edit-container">
+        <!-- Left Column: Product Image with 3D Effect -->
+        <div class="product-section">
+            <div class="product-display">
+                <div class="product-wrapper">
+                    <img src="asset/images_produits/veste_tobiu.png" alt="Veste Tobiu - Défaut" class="product-image active" id="productImage" data-base="veste_tobiu.png">
+                    <div class="product-preview-info">
+                        <p class="preview-text" id="previewText">Bonnet: Oui | Matière: Polyester | Couleur: Terracotta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Customization Form -->
+        <div class="form-section">
+            <h1 class="form-title">Personnalisez votre veste</h1>
+
+            <!-- Size Selection -->
+            <div class="form-group">
+                <label class="form-label">Taille :</label>
+                <div class="size-buttons">
+                    <button class="size-btn" data-size="xs">XS</button>
+                    <button class="size-btn" data-size="s">S</button>
+                    <button class="size-btn active" data-size="m">M</button>
+                    <button class="size-btn" data-size="l">L</button>
+                    <button class="size-btn" data-size="xl">XL</button>
+                </div>
+            </div>
+
+            <!-- Hood Presence -->
+            <div class="form-group">
+                <label class="form-label">Présence du bonnet :</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="hood" value="yes" checked class="radio-input" data-hood="yes">
+                        <span class="radio-custom"></span>
+                        Oui
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="hood" value="no" class="radio-input" data-hood="no">
+                        <span class="radio-custom"></span>
+                        Non
+                    </label>
+                </div>
+            </div>
+
+            <!-- Hood Material -->
+            <div class="form-group">
+                <label class="form-label">Matière intérieure de la capuche :</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="material" value="polyester" checked class="radio-input" data-material="polyester">
+                        <span class="radio-custom"></span>
+                        Polyester
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="material" value="satin" class="radio-input" data-material="satin">
+                        <span class="radio-custom"></span>
+                        Satin
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="material" value="sherpa" class="radio-input" data-material="sherpa">
+                        <span class="radio-custom"></span>
+                        Sherpa
+                    </label>
+                </div>
+            </div>
+
+            <!-- Color Selection -->
+            <div class="form-group">
+                <label class="form-label">Couleur :</label>
+                <div class="color-options">
+                    <div class="color-circle" style="background-color: #D4C4B0;" data-color="beige" title="Beige"></div>
+                    <div class="color-circle active" style="background-color: #C4571A;" data-color="terracotta" title="Terracotta"></div>
+                    <div class="color-circle" style="background-color: #F5F0EB;" data-color="cream" title="Crème"></div>
+                </div>
+            </div>
+
+            <!-- Order Button -->
+            <button class="order-button">Commander</button>
+        </div>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
